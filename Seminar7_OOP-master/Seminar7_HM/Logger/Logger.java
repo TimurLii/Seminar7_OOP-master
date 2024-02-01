@@ -22,8 +22,8 @@ public class Logger implements CalculatorLogger {
 
     public void writeFile(double num1, double  num2, String nameFile) {
         try (FileWriter fw = new FileWriter(nameFile, true)) {
-            fw.write("%s" + "%s"+ ";", (int) num1, (int) num2);
-            fw.write(num1 + num2 + ";");
+//            fw.write("%s" + "%s"+ ";", (int) num1, (int) num2);
+            fw.write(num1 - num2 + ";");
             fw.append('\n');
             fw.close();
         } catch (IOException ex) {
